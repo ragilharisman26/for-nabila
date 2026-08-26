@@ -1,0 +1,2533 @@
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Nabila ♡</title>
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html,
+body{
+    width:100%;
+    height:100%;
+}
+
+body{
+    overflow:hidden;
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    color:#463c42;
+
+    background:
+        radial-gradient(
+            circle at 10% 15%,
+            #ffe3ed 0,
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 90% 85%,
+            #eae3ff 0,
+            transparent 32%
+        ),
+        #fffaf8;
+}
+
+
+/* =========================================================
+   DECORATION
+========================================================= */
+
+.decor{
+    position:fixed;
+    pointer-events:none;
+
+    color:#dc94ad;
+    opacity:.45;
+
+    z-index:1;
+
+    animation:
+        floatDecor 4s ease-in-out infinite;
+}
+
+.decor-1{
+    top:12%;
+    left:9%;
+    font-size:22px;
+}
+
+.decor-2{
+    top:19%;
+    right:9%;
+    font-size:26px;
+    animation-delay:1s;
+}
+
+.decor-3{
+    bottom:14%;
+    left:13%;
+    font-size:18px;
+    animation-delay:1.5s;
+}
+
+.decor-4{
+    bottom:17%;
+    right:12%;
+    font-size:22px;
+    animation-delay:.6s;
+}
+
+@keyframes floatDecor{
+
+    0%,100%{
+        transform:
+            translateY(0)
+            rotate(0);
+    }
+
+    50%{
+        transform:
+            translateY(-10px)
+            rotate(8deg);
+    }
+}
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+.welcome{
+    position:fixed;
+    inset:0;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:20px;
+
+    z-index:100;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+.welcome.hide{
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+}
+
+.welcome-content{
+    animation:
+        welcomeIn 1s ease;
+}
+
+@keyframes welcomeIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.96);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.welcome-label{
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#ae7c8e;
+}
+
+.welcome-title{
+
+    margin-top:10px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(58px,9vw,88px);
+
+    font-weight:700;
+
+    line-height:1;
+
+    color:#43383f;
+}
+
+.welcome-title span{
+    color:#d77f9d;
+}
+
+.welcome-description{
+
+    margin-top:22px;
+
+    font-size:14px;
+
+    line-height:1.8;
+
+    color:#81757c;
+}
+
+.open-button{
+
+    margin-top:30px;
+
+    padding:14px 30px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#d87f9d;
+
+    color:white;
+
+    font-size:14px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 30px
+        rgba(210,120,150,.25);
+
+    transition:.25s ease;
+}
+
+.open-button:hover{
+
+    transform:
+        translateY(-3px)
+        scale(1.04);
+}
+
+
+/* =========================================================
+   MAIN SCENE
+========================================================= */
+
+.scene{
+
+    position:fixed;
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease;
+}
+
+.scene.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+.scene-content{
+
+    width:min(900px,94vw);
+
+    height:520px;
+
+    position:relative;
+
+    text-align:center;
+}
+
+
+/* =========================================================
+   FROM
+========================================================= */
+
+.from-label{
+
+    margin-top:20px;
+
+    font-size:11px;
+
+    letter-spacing:5px;
+
+    text-transform:uppercase;
+
+    color:#ad7c8e;
+}
+
+.from-name{
+
+    margin-top:7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:39px;
+
+    font-weight:700;
+
+    color:#443940;
+}
+
+
+/* =========================================================
+   GAME
+========================================================= */
+
+.game{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    top:95px;
+
+    height:390px;
+
+    touch-action:none;
+}
+
+
+/* =========================================================
+   ENVELOPE
+========================================================= */
+
+.envelope{
+
+    position:absolute;
+
+    width:260px;
+    height:170px;
+
+    right:65px;
+    top:90px;
+
+    z-index:10;
+
+    filter:
+        drop-shadow(
+            0 20px 30px
+            rgba(120,75,100,.17)
+        );
+
+    transition:
+        transform .25s ease;
+}
+
+
+/* LETTER */
+
+.letter{
+
+    position:absolute;
+
+    width:214px;
+    height:130px;
+
+    left:23px;
+    top:16px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    background:#fffefb;
+
+    border-radius:5px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:17px;
+
+    color:#95667b;
+
+    box-shadow:
+        0 5px 15px
+        rgba(80,50,60,.08);
+
+    z-index:1;
+
+    transition:
+        transform .9s
+        cubic-bezier(.2,.8,.2,1);
+}
+
+
+/* ENVELOPE BODY */
+
+.envelope-body{
+
+    position:absolute;
+
+    inset:0;
+
+    overflow:hidden;
+
+    background:#efb5ca;
+
+    border-radius:9px;
+
+    z-index:3;
+}
+
+
+/* LEFT FOLD */
+
+.envelope-body::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    left:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+        130px solid #e2a9bf;
+
+    border-top:
+        85px solid transparent;
+}
+
+
+/* RIGHT FOLD */
+
+.envelope-body::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+    right:0;
+
+    width:0;
+    height:0;
+
+    border-right:
+        130px solid #e2a9bf;
+
+    border-top:
+        85px solid transparent;
+}
+
+
+/* =========================================================
+   FLAP
+========================================================= */
+
+.flap{
+
+    position:absolute;
+
+    left:0;
+    top:0;
+
+    width:0;
+    height:0;
+
+    border-left:
+        130px solid transparent;
+
+    border-right:
+        130px solid transparent;
+
+    border-top:
+        90px solid #e9afc5;
+
+    transform-origin:
+        top center;
+
+    transition:
+        transform .8s
+        cubic-bezier(.65,0,.35,1);
+
+    z-index:6;
+}
+
+
+/* =========================================================
+   SEAL
+========================================================= */
+
+.seal{
+
+    position:absolute;
+
+    left:50%;
+    top:50%;
+
+    width:48px;
+    height:48px;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    transform:
+        translate(-50%,-50%);
+
+    border-radius:50%;
+
+    background:#d87598;
+
+    color:white;
+
+    font-size:19px;
+
+    z-index:8;
+
+    transition:.3s ease;
+}
+
+
+/* =========================================================
+   ENVELOPE LABEL
+========================================================= */
+
+.envelope-label{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:-34px;
+
+    transform:
+        translateX(-50%);
+
+    white-space:nowrap;
+
+    font-size:12px;
+
+    color:#a17b89;
+}
+
+
+/* =========================================================
+   ENVELOPE OPEN
+========================================================= */
+
+.envelope.open .flap{
+
+    transform:
+        rotateX(180deg);
+}
+
+.envelope.open .seal{
+
+    opacity:0;
+
+    transform:
+        translate(-50%,-50%)
+        scale(.2);
+}
+
+.envelope.open .letter{
+
+    transform:
+        translateY(-100px);
+
+    z-index:7;
+}
+
+
+/* =========================================================
+   ENVELOPE HIT
+========================================================= */
+
+.envelope.hit{
+
+    animation:
+        envelopeHit .45s ease;
+}
+
+@keyframes envelopeHit{
+
+    0%{
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+
+    25%{
+        transform:
+            translateX(-9px)
+            rotate(-2deg);
+    }
+
+    50%{
+        transform:
+            translateX(9px)
+            rotate(2deg);
+    }
+
+    75%{
+        transform:
+            translateX(-5px)
+            rotate(-1deg);
+    }
+
+    100%{
+        transform:
+            translateX(0)
+            rotate(0);
+    }
+}
+
+
+/* =========================================================
+   WEAPON
+========================================================= */
+
+.weapon{
+
+    position:absolute;
+
+    left:105px;
+    top:145px;
+
+    width:260px;
+    height:180px;
+
+    z-index:20;
+
+    cursor:grab;
+
+    user-select:none;
+
+    touch-action:none;
+
+    transform:
+        translateX(0)
+        rotate(0deg);
+
+    transform-origin:
+        62px 90px;
+
+    filter:
+        drop-shadow(
+            0 7px 7px
+            rgba(80,55,65,.13)
+        );
+
+    transition:
+        transform .15s ease;
+}
+
+.weapon.dragging{
+
+    cursor:grabbing;
+}
+
+.weapon svg{
+
+    width:100%;
+    height:100%;
+
+    overflow:visible;
+
+    pointer-events:none;
+}
+
+
+/* =========================================================
+   BOW
+
+   Lengkungan menghadap kanan.
+========================================================= */
+
+.bow{
+
+    fill:none;
+
+    stroke:#9b5d70;
+
+    stroke-width:9;
+
+    stroke-linecap:round;
+}
+
+
+/* =========================================================
+   BOW STRING
+========================================================= */
+
+.bow-string{
+
+    fill:none;
+
+    stroke:#71656a;
+
+    stroke-width:2.5;
+
+    stroke-linecap:round;
+}
+
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.arrow-shaft{
+
+    stroke:#4d4541;
+
+    stroke-width:4;
+
+    stroke-linecap:round;
+}
+
+.arrow-head{
+
+    fill:#7d706d;
+}
+
+.arrow-feather{
+
+    fill:#d87f9d;
+}
+
+
+/* =========================================================
+   AIM GUIDE
+========================================================= */
+
+.aim-guide{
+
+    position:absolute;
+
+    height:2px;
+
+    width:0;
+
+    left:170px;
+    top:235px;
+
+    transform-origin:left center;
+
+    pointer-events:none;
+
+    opacity:0;
+
+    background:
+        repeating-linear-gradient(
+            90deg,
+            rgba(210,125,153,.35) 0 8px,
+            transparent 8px 16px
+        );
+
+    transition:
+        opacity .2s;
+}
+
+.aim-guide.show{
+
+    opacity:.8;
+}
+
+
+/* =========================================================
+   INSTRUCTION
+========================================================= */
+
+.instruction{
+
+    position:absolute;
+
+    left:0;
+    right:0;
+
+    bottom:8px;
+
+    font-size:13px;
+
+    color:#9a8b92;
+
+    animation:
+        instructionPulse 2.2s infinite;
+}
+
+@keyframes instructionPulse{
+
+    0%,100%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.45;
+    }
+}
+
+
+/* =========================================================
+   FLYING ARROW
+========================================================= */
+
+.flying-arrow{
+
+    position:fixed;
+
+    width:165px;
+    height:8px;
+
+    pointer-events:none;
+
+    z-index:60;
+
+    transform-origin:
+        0 50%;
+}
+
+.flying-arrow .shaft{
+
+    position:absolute;
+
+    left:0;
+    top:50%;
+
+    width:145px;
+    height:4px;
+
+    transform:
+        translateY(-50%);
+
+    background:#4d4541;
+
+    border-radius:10px;
+}
+
+.flying-arrow .head{
+
+    position:absolute;
+
+    right:0;
+    top:50%;
+
+    width:0;
+    height:0;
+
+    transform:
+        translateY(-50%);
+
+    border-top:
+        8px solid transparent;
+
+    border-bottom:
+        8px solid transparent;
+
+    border-left:
+        18px solid #7d706d;
+}
+
+.flying-arrow .feather-top,
+.flying-arrow .feather-bottom{
+
+    position:absolute;
+
+    left:20px;
+
+    width:25px;
+    height:10px;
+
+    background:#d87f9d;
+
+    border-radius:100% 0;
+}
+
+.flying-arrow .feather-top{
+
+    top:-4px;
+
+    transform:
+        rotate(-25deg);
+}
+
+.flying-arrow .feather-bottom{
+
+    bottom:-4px;
+
+    transform:
+        rotate(25deg);
+}
+
+
+/* =========================================================
+   QUESTION
+========================================================= */
+
+.question{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    padding:20px;
+
+    text-align:center;
+
+    opacity:0;
+    visibility:hidden;
+
+    transform:scale(1.04);
+
+    transition:
+        opacity .8s ease,
+        visibility .8s ease,
+        transform .8s ease;
+
+    z-index:50;
+}
+
+.question.show{
+
+    opacity:1;
+    visibility:visible;
+
+    transform:scale(1);
+}
+
+.question-card{
+
+    width:min(640px,92vw);
+
+    padding:55px 30px;
+
+    border-radius:38px;
+
+    background:
+        rgba(255,255,255,.78);
+
+    border:
+        1px solid rgba(255,255,255,.9);
+
+    backdrop-filter:
+        blur(20px);
+
+    box-shadow:
+        0 30px 90px
+        rgba(110,75,95,.14);
+}
+
+.question-flower{
+
+    font-size:45px;
+
+    animation:
+        flowerFloat 3s ease-in-out infinite;
+}
+
+@keyframes flowerFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px);
+    }
+}
+
+.question-small{
+
+    margin-top:17px;
+
+    font-size:11px;
+
+    letter-spacing:4px;
+
+    text-transform:uppercase;
+
+    color:#ad7c8e;
+}
+
+.question-title{
+
+    margin-top:7px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(50px,8vw,72px);
+}
+
+.question-title span{
+
+    color:#d67e9c;
+}
+
+.question-text{
+
+    margin-top:28px;
+
+    font-size:26px;
+
+    font-weight:600;
+
+    line-height:1.5;
+}
+
+.question-hint{
+
+    margin-top:9px;
+
+    font-size:13px;
+
+    color:#94878e;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.buttons{
+
+    position:relative;
+
+    width:100%;
+
+    height:130px;
+
+    margin-top:18px;
+}
+
+.yes-button{
+
+    position:absolute;
+
+    left:calc(50% - 125px);
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    padding:15px 31px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#d77f9d;
+
+    color:white;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 12px 25px
+        rgba(210,120,150,.2);
+
+    transition:
+        transform .25s ease;
+}
+
+.yes-button:hover{
+
+    transform:
+        translateY(-50%)
+        scale(1.07);
+}
+
+.no-button{
+
+    position:absolute;
+
+    left:calc(50% + 18px);
+
+    top:50%;
+
+    transform:
+        translateY(-50%);
+
+    padding:13px 26px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#f0edef;
+
+    color:#756a71;
+
+    cursor:pointer;
+
+    transition:
+        left .2s ease,
+        top .2s ease;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success{
+
+    position:fixed;
+
+    inset:0;
+
+    display:flex;
+
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #ffe0eb,
+            #eee6ff,
+            #fffaf8
+        );
+
+    opacity:0;
+    visibility:hidden;
+
+    transition:
+        opacity .7s ease;
+
+    z-index:100;
+}
+
+.success.show{
+
+    opacity:1;
+    visibility:visible;
+}
+
+.success-content{
+
+    animation:
+        successIn .8s ease;
+}
+
+@keyframes successIn{
+
+    from{
+        opacity:0;
+
+        transform:
+            translateY(25px)
+            scale(.94);
+    }
+
+    to{
+        opacity:1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+}
+
+.success-heart{
+
+    font-size:76px;
+
+    animation:
+        flowerFloat 2s infinite;
+}
+
+.success-title{
+
+    margin-top:12px;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(55px,8vw,78px);
+}
+
+.success-text{
+
+    margin-top:14px;
+
+    color:#766b72;
+
+    line-height:1.8;
+
+    font-size:14px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:700px){
+
+    .scene-content{
+
+        width:96vw;
+
+        height:470px;
+    }
+
+    .game{
+
+        top:95px;
+
+        height:350px;
+    }
+
+    .weapon{
+
+        left:5px;
+
+        top:150px;
+
+        width:205px;
+
+        height:145px;
+    }
+
+    .envelope{
+
+        width:190px;
+
+        height:125px;
+
+        right:0;
+
+        top:100px;
+    }
+
+    .flap{
+
+        border-left-width:95px;
+        border-right-width:95px;
+        border-top-width:67px;
+    }
+
+    .envelope-body::before{
+
+        border-left-width:95px;
+        border-top-width:63px;
+    }
+
+    .envelope-body::after{
+
+        border-right-width:95px;
+        border-top-width:63px;
+    }
+
+    .letter{
+
+        width:155px;
+
+        height:95px;
+
+        left:17px;
+    }
+
+    .question-card{
+
+        padding:
+            45px
+            20px;
+    }
+
+    .question-text{
+
+        font-size:22px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media(max-width:430px){
+
+    .from-name{
+
+        font-size:33px;
+    }
+
+    .weapon{
+
+        left:-5px;
+
+        width:185px;
+    }
+
+    .envelope{
+
+        width:175px;
+
+        height:115px;
+    }
+
+    .flap{
+
+        border-left-width:87px;
+        border-right-width:87px;
+        border-top-width:62px;
+    }
+
+    .envelope-body::before{
+
+        border-left-width:87px;
+        border-top-width:58px;
+    }
+
+    .envelope-body::after{
+
+        border-right-width:87px;
+        border-top-width:58px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     DECOR
+========================================================= -->
+
+<div class="decor decor-1">✦</div>
+<div class="decor decor-2">♡</div>
+<div class="decor decor-3">✧</div>
+<div class="decor decor-4">✿</div>
+
+
+<!-- =========================================================
+     WELCOME
+========================================================= -->
+
+<section
+    class="welcome"
+    id="welcome"
+>
+
+    <div class="welcome-content">
+
+        <div class="welcome-label">
+            a little surprise for
+        </div>
+
+        <h1 class="welcome-title">
+            Nabila<span>.</span>
+        </h1>
+
+        <div class="welcome-description">
+
+            Welcome, Nabila ♡
+            <br>
+
+            Ada sesuatu kecil
+            yang mau aku kasih lihat.
+
+        </div>
+
+        <button
+            class="open-button"
+            id="openButton"
+        >
+            Buka ♡
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     MAIN SCENE
+========================================================= -->
+
+<section
+    class="scene"
+    id="scene"
+>
+
+    <div class="scene-content">
+
+        <div class="from-label">
+            From
+        </div>
+
+        <div class="from-name">
+            Ragil ♡
+        </div>
+
+
+        <div class="game">
+
+
+            <!-- AIM GUIDE -->
+
+            <div
+                class="aim-guide"
+                id="aimGuide"
+            ></div>
+
+
+            <!-- =================================================
+                 BOW
+            ================================================= -->
+
+            <div
+                class="weapon"
+                id="weapon"
+            >
+
+                <svg
+                    viewBox="0 0 260 180"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <!-- BOW -->
+
+                    <path
+                        class="bow"
+                        d="
+                            M62 8
+                            Q112 90 62 172
+                        "
+                    />
+
+
+                    <!-- STRING -->
+
+                    <path
+                        id="bowString"
+                        class="bow-string"
+                        d="
+                            M62 8
+                            L62 172
+                        "
+                    />
+
+
+                    <!-- ARROW -->
+
+                    <g id="arrow">
+
+                        <line
+                            class="arrow-shaft"
+                            x1="62"
+                            y1="90"
+                            x2="225"
+                            y2="90"
+                        />
+
+                        <path
+                            class="arrow-head"
+                            d="
+                                M225 90
+                                L207 80
+                                L211 90
+                                L207 100
+                                Z
+                            "
+                        />
+
+                        <path
+                            class="arrow-feather"
+                            d="
+                                M88 90
+                                Q73 70 57 72
+                                Q66 86 88 90
+                            "
+                        />
+
+                        <path
+                            class="arrow-feather"
+                            d="
+                                M88 90
+                                Q73 110 57 108
+                                Q66 94 88 90
+                            "
+                        />
+
+                    </g>
+
+                </svg>
+
+            </div>
+
+
+            <!-- =================================================
+                 ENVELOPE
+            ================================================= -->
+
+            <div
+                class="envelope"
+                id="envelope"
+            >
+
+                <div class="letter">
+                    Untuk Nabila ♡
+                </div>
+
+                <div class="envelope-body"></div>
+
+                <div class="flap"></div>
+
+                <div class="seal">
+                    ♥
+                </div>
+
+                <div class="envelope-label">
+                    surat khusus untuk Nabila
+                </div>
+
+            </div>
+
+
+            <!-- INSTRUCTION -->
+
+            <div
+                class="instruction"
+                id="instruction"
+            >
+                Tarik busur ke kiri → bidik surat → lepaskan 🏹
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     QUESTION
+========================================================= -->
+
+<section
+    class="question"
+    id="question"
+>
+
+    <div class="question-card">
+
+        <div class="question-flower">
+            🌷
+        </div>
+
+        <div class="question-small">
+            Hi, Nabila
+        </div>
+
+        <h2 class="question-title">
+            Nabila<span>.</span>
+        </h2>
+
+        <div class="question-text">
+
+            Kamu mau gak
+            <br>
+
+            jadi istri masa depan aku? ❤️
+
+        </div>
+
+        <div class="question-hint">
+            jawab yang jujur ya...
+        </div>
+
+        <div class="buttons">
+
+            <button
+                class="yes-button"
+                id="yesButton"
+            >
+                Yes ❤️
+            </button>
+
+            <button
+                class="no-button"
+                id="noButton"
+            >
+                No
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================================================
+     SUCCESS
+========================================================= -->
+
+<section
+    class="success"
+    id="success"
+>
+
+    <div class="success-content">
+
+        <div class="success-heart">
+            🥹❤️
+        </div>
+
+        <h2 class="success-title">
+            YEAY!
+        </h2>
+
+        <div class="success-text">
+
+            Jadi sekarang resmi ya? 😭
+            <br>
+
+            Makasih udah mau.
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+/* =========================================================
+   ELEMENTS
+========================================================= */
+
+const welcome =
+    document.getElementById("welcome");
+
+const openButton =
+    document.getElementById("openButton");
+
+const scene =
+    document.getElementById("scene");
+
+const weapon =
+    document.getElementById("weapon");
+
+const bowString =
+    document.getElementById("bowString");
+
+const envelope =
+    document.getElementById("envelope");
+
+const aimGuide =
+    document.getElementById("aimGuide");
+
+const instruction =
+    document.getElementById("instruction");
+
+const question =
+    document.getElementById("question");
+
+const yesButton =
+    document.getElementById("yesButton");
+
+const noButton =
+    document.getElementById("noButton");
+
+const success =
+    document.getElementById("success");
+
+
+/* =========================================================
+   STATE
+========================================================= */
+
+let dragging = false;
+
+let fired = false;
+
+let opened = false;
+
+let hasPulled = false;
+
+let pullAmount = 0;
+
+let startPointerX = 0;
+
+let startPointerY = 0;
+
+
+/* =========================================================
+   WELCOME
+========================================================= */
+
+openButton.addEventListener(
+    "click",
+    () => {
+
+        welcome.classList.add("hide");
+
+        setTimeout(
+            () => {
+
+                scene.classList.add("show");
+
+            },
+            450
+        );
+
+    }
+);
+
+
+/* =========================================================
+   POINTER
+========================================================= */
+
+function getPointer(event){
+
+    if(
+        event.touches &&
+        event.touches.length > 0
+    ){
+
+        return {
+
+            x:
+                event.touches[0].clientX,
+
+            y:
+                event.touches[0].clientY
+
+        };
+
+    }
+
+    return {
+
+        x:
+            event.clientX,
+
+        y:
+            event.clientY
+
+    };
+
+}
+
+
+/* =========================================================
+   ORIGIN
+========================================================= */
+
+function getOrigin(){
+
+    const rect =
+        weapon.getBoundingClientRect();
+
+    return {
+
+        x:
+            rect.left +
+            rect.width *
+            (62 / 260),
+
+        y:
+            rect.top +
+            rect.height *
+            (90 / 180)
+
+    };
+
+}
+
+
+/* =========================================================
+   START DRAG
+========================================================= */
+
+function startDrag(event){
+
+    if(fired)
+        return;
+
+    dragging = true;
+
+    hasPulled = false;
+
+    pullAmount = 0;
+
+    const pointer =
+        getPointer(event);
+
+    startPointerX =
+        pointer.x;
+
+    startPointerY =
+        pointer.y;
+
+    weapon.classList.add(
+        "dragging"
+    );
+
+    instruction.textContent =
+        "Tarik busurnya ke kiri... 🏹";
+
+}
+
+
+/* =========================================================
+   AIM
+========================================================= */
+
+function aim(event){
+
+    if(!dragging || fired)
+        return;
+
+    const pointer =
+        getPointer(event);
+
+
+    /*
+       Selisih dari posisi awal.
+    */
+
+    const dx =
+        pointer.x -
+        startPointerX;
+
+    const dy =
+        pointer.y -
+        startPointerY;
+
+
+    /*
+       Tarikan hanya ke kiri.
+    */
+
+    const leftPull =
+        Math.max(
+            0,
+            -dx
+        );
+
+
+    /*
+       Maksimum tarikan.
+    */
+
+    pullAmount =
+        Math.min(
+            leftPull,
+            80
+        );
+
+
+    /*
+       Minimal tarikan agar bisa menembak.
+    */
+
+    if(pullAmount >= 30){
+
+        hasPulled = true;
+
+        instruction.textContent =
+            "Lepaskan untuk menembak! 🏹";
+
+        aimGuide.classList.add(
+            "show"
+        );
+
+    }
+    else{
+
+        hasPulled = false;
+
+        instruction.textContent =
+            "Tarik lebih jauh...";
+
+        aimGuide.classList.remove(
+            "show"
+        );
+
+    }
+
+
+    /*
+       Arahkan sedikit berdasarkan posisi vertikal.
+    */
+
+    const angle =
+        Math.max(
+            -28,
+            Math.min(
+                28,
+                dy * .35
+            )
+        );
+
+
+    /*
+       Geser weapon ke kiri.
+    */
+
+    weapon.style.transform =
+        `
+        translateX(${-pullAmount}px)
+        rotate(${angle}deg)
+        `;
+
+
+    /*
+       Tarik tali ke kanan.
+
+       Saat tidak ditarik:
+
+       M62 → L62
+
+       Saat ditarik:
+
+       M62 → Q(lebih kanan) → 62
+    */
+
+    const stringPull =
+        62 +
+        pullAmount *
+        .75;
+
+
+    bowString.setAttribute(
+        "d",
+        `
+        M62 8
+        Q${stringPull} 90 62 172
+        `
+    );
+
+
+    /*
+       AIM GUIDE
+    */
+
+    if(hasPulled){
+
+        const origin =
+            getOrigin();
+
+        const envelopeRect =
+            envelope.getBoundingClientRect();
+
+        const targetX =
+            envelopeRect.left +
+            envelopeRect.width / 2;
+
+        const targetY =
+            envelopeRect.top +
+            envelopeRect.height / 2;
+
+
+        const guideX =
+            targetX -
+            origin.x;
+
+        const guideY =
+            targetY -
+            origin.y;
+
+
+        const guideDistance =
+            Math.sqrt(
+                guideX * guideX +
+                guideY * guideY
+            );
+
+
+        const guideAngle =
+            Math.atan2(
+                guideY,
+                guideX
+            ) *
+            180 /
+            Math.PI;
+
+
+        aimGuide.style.width =
+            guideDistance + "px";
+
+        aimGuide.style.transform =
+            `
+            rotate(${guideAngle}deg)
+            `;
+
+    }
+
+}
+
+
+/* =========================================================
+   RELEASE
+========================================================= */
+
+function release(){
+
+    if(!dragging)
+        return;
+
+    dragging = false;
+
+    weapon.classList.remove(
+        "dragging"
+    );
+
+    aimGuide.classList.remove(
+        "show"
+    );
+
+
+    /*
+       PENTING:
+
+       Kalau belum ditarik cukup,
+       JANGAN MENEMBAK.
+    */
+
+    if(!hasPulled){
+
+        instruction.textContent =
+            "Tarik busurnya dulu yaa 🏹";
+
+        weapon.style.transition =
+            "transform .25s ease";
+
+        weapon.style.transform =
+            "translateX(0) rotate(0)";
+
+        bowString.setAttribute(
+            "d",
+            "M62 8 L62 172"
+        );
+
+        pullAmount = 0;
+
+        return;
+
+    }
+
+
+    /*
+       Kalau sudah ditarik,
+       baru tembak.
+    */
+
+    shoot();
+
+}
+
+
+/* =========================================================
+   MOUSE
+========================================================= */
+
+weapon.addEventListener(
+    "mousedown",
+    startDrag
+);
+
+window.addEventListener(
+    "mousemove",
+    aim
+);
+
+window.addEventListener(
+    "mouseup",
+    release
+);
+
+
+/* =========================================================
+   TOUCH
+========================================================= */
+
+weapon.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+
+        startDrag(event);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+window.addEventListener(
+    "touchmove",
+    event => {
+
+        if(!dragging)
+            return;
+
+        event.preventDefault();
+
+        aim(event);
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+window.addEventListener(
+    "touchend",
+    event => {
+
+        if(!dragging)
+            return;
+
+        event.preventDefault();
+
+        release();
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+/* =========================================================
+   SHOOT
+========================================================= */
+
+function shoot(){
+
+    if(fired)
+        return;
+
+    if(!hasPulled)
+        return;
+
+    fired = true;
+
+    instruction.textContent =
+        "WUSSSHHHH! 💨";
+
+
+    /*
+       Posisi weapon saat dilepas.
+    */
+
+    const weaponRect =
+        weapon.getBoundingClientRect();
+
+
+    const envelopeRect =
+        envelope.getBoundingClientRect();
+
+
+    /*
+       Titik awal anak panah.
+    */
+
+    const startX =
+        weaponRect.left +
+        weaponRect.width *
+        (225 / 260);
+
+    const startY =
+        weaponRect.top +
+        weaponRect.height *
+        (90 / 180);
+
+
+    /*
+       Target amplop.
+    */
+
+    const targetX =
+        envelopeRect.left +
+        envelopeRect.width / 2;
+
+    const targetY =
+        envelopeRect.top +
+        envelopeRect.height / 2;
+
+
+    const dx =
+        targetX -
+        startX;
+
+    const dy =
+        targetY -
+        startY;
+
+
+    const distance =
+        Math.sqrt(
+            dx * dx +
+            dy * dy
+        );
+
+
+    const angle =
+        Math.atan2(
+            dy,
+            dx
+        ) *
+        180 /
+        Math.PI;
+
+
+    /*
+       Buat anak panah baru.
+    */
+
+    const flyingArrow =
+        document.createElement(
+            "div"
+        );
+
+    flyingArrow.className =
+        "flying-arrow";
+
+
+    flyingArrow.innerHTML = `
+
+        <div class="shaft"></div>
+
+        <div class="head"></div>
+
+        <div class="feather-top"></div>
+
+        <div class="feather-bottom"></div>
+
+    `;
+
+
+    document.body.appendChild(
+        flyingArrow
+    );
+
+
+    /*
+       Posisi awal.
+    */
+
+    flyingArrow.style.left =
+        startX + "px";
+
+    flyingArrow.style.top =
+        startY + "px";
+
+    flyingArrow.style.transform =
+        `
+        rotate(${angle}deg)
+        `;
+
+
+    void flyingArrow.offsetWidth;
+
+
+    /*
+       Animasi terbang.
+    */
+
+    flyingArrow.style.transition =
+        `
+        transform .85s
+        cubic-bezier(.15,.8,.2,1)
+        `;
+
+
+    flyingArrow.style.transform =
+        `
+        translate(${distance}px,${dy}px)
+        rotate(${angle}deg)
+        `;
+
+
+    /*
+       Busur kembali.
+    */
+
+    weapon.style.transition =
+        "transform .35s ease";
+
+    weapon.style.transform =
+        "translateX(0) rotate(0)";
+
+
+    bowString.setAttribute(
+        "d",
+        "M62 8 L62 172"
+    );
+
+
+    /*
+       Setelah panah sampai.
+    */
+
+    setTimeout(
+        () => {
+
+            flyingArrow.remove();
+
+            hitEnvelope();
+
+        },
+        850
+    );
+
+}
+
+
+/* =========================================================
+   HIT ENVELOPE
+========================================================= */
+
+function hitEnvelope(){
+
+    envelope.classList.add(
+        "hit"
+    );
+
+    instruction.textContent =
+        "💌 Suratnya terbuka...";
+
+
+    setTimeout(
+        () => {
+
+            openLetter();
+
+        },
+        400
+    );
+
+}
+
+
+/* =========================================================
+   OPEN LETTER
+========================================================= */
+
+function openLetter(){
+
+    if(opened)
+        return;
+
+    opened = true;
+
+    envelope.classList.add(
+        "open"
+    );
+
+
+    /*
+       Hilangkan scene.
+    */
+
+    setTimeout(
+        () => {
+
+            scene.classList.remove(
+                "show"
+            );
+
+        },
+        1300
+    );
+
+
+    /*
+       Munculkan pertanyaan.
+    */
+
+    setTimeout(
+        () => {
+
+            question.classList.add(
+                "show"
+            );
+
+        },
+        1900
+    );
+
+}
+
+
+/* =========================================================
+   NO BUTTON
+========================================================= */
+
+function moveNo(){
+
+    const area =
+        document.querySelector(
+            ".buttons"
+        );
+
+    const areaRect =
+        area.getBoundingClientRect();
+
+    const buttonRect =
+        noButton.getBoundingClientRect();
+
+
+    const maxX =
+        areaRect.width -
+        buttonRect.width;
+
+    const maxY =
+        areaRect.height -
+        buttonRect.height;
+
+
+    const x =
+        Math.random() *
+        Math.max(
+            maxX,
+            0
+        );
+
+    const y =
+        Math.random() *
+        Math.max(
+            maxY,
+            0
+        );
+
+
+    noButton.style.left =
+        x + "px";
+
+    noButton.style.top =
+        y + "px";
+
+    noButton.style.transform =
+        "none";
+
+}
+
+
+noButton.addEventListener(
+    "mouseenter",
+    moveNo
+);
+
+
+noButton.addEventListener(
+    "touchstart",
+    event => {
+
+        event.preventDefault();
+
+        moveNo();
+
+    },
+    {
+        passive:false
+    }
+);
+
+
+noButton.addEventListener(
+    "click",
+    moveNo
+);
+
+
+/* =========================================================
+   YES
+========================================================= */
+
+yesButton.addEventListener(
+    "click",
+    () => {
+
+        success.classList.add(
+            "show"
+        );
+
+    }
+);
+
+</script>
+
+</body>
+</html>
+```
